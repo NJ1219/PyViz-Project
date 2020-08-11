@@ -2,8 +2,10 @@
 
 ## Pythonic Monopoly
 
-Language Used: Python
-Libraries Used: Pandas, Matplotlib, hvplot, Plotly Express
+Language Used: Python   
+
+Libraries Used: Pandas, Matplotlib, hvplot, Plotly Express    
+
 APIs used: Mapbox
 
 ## Objective:  
