@@ -26,11 +26,11 @@ This dashboard's goal is to provide charts, maps, and interactive visualizations
 ## Steps
 ### Rental Analysis
 
-The first step to building the dashboard is to work out all of the calculations and visualizations in an analysis notebook. Once the code is running out, it can be copied over to a dashboard code and used with Panel to create the final layout. I used the `rental_analysis.ipynb` to complete the following:
+The first step to building the dashboard is to work out all of the calculations and visualizations in an analysis notebook. Once the code is running out, it can be copied over to a dashboard code and used with Panel to create the final layout. The Jupyter Notebook `rental_analysis.ipynb` was used to complete the following:
 
 #### Dwelling Types Per Year
 
-In this section, I calculated the number of dwelling types per year and visualized the results as a bar chart using the Pandas plot function. By default, the colour of the bar charts is blue. However, it is hard to see the difference between the yearly data. So, I used the `color` parameter of the `plot()` function to change the colour of each bar chart manually.
+In this section, the number of dwelling types per year was calculated and the results were visualized as a bar chart using the Pandas plot function. By default, the colour of the bar charts is blue. However, it is hard to see the difference between the yearly data. So, the use of `color` parameter of the `plot()` function was made to change the colour of each bar chart manually.
 
 
 | Default Bar Charts                                  | Colored Bar Charts                                   |
@@ -39,7 +39,7 @@ In this section, I calculated the number of dwelling types per year and visualiz
 
 #### Average Monthly Shelter Costs in Toronto Per Year
 
-In this section, I wanted to visualize the average monthly shelter costs per year to understand rental income trends over time better. I visualized the average (mean) shelter cost for owned and rented dwellings per year and visualized it as line charts.
+In this section, it was required to visualize the average monthly shelter costs per year to understand rental income trends over time better. It visualized the average (mean) shelter cost for owned and rented dwellings per year and visualization was made as line charts.
 
 
 1. Calculated the average monthly shelter costs for owned and rented dwellings for each year.
@@ -50,7 +50,7 @@ In this section, I wanted to visualize the average monthly shelter costs per yea
 
 #### Average House Value per Year
 
-In this section, I wanted to determine the average house value per year. An investor may want to understand better the sales price of the rental property over time. For example, a customer will want to know if they should expect an increase or decrease in the property value over time so they can determine how long to hold the rental property. I visualized the `average_house_value` per year as a bar chart.
+In this section, it was required to determine the average house value per year. An investor may want to understand better the sales price of the rental property over time. For example, a customer will want to know if they should expect an increase or decrease in the property value over time so they can determine how long to hold the rental property. The visualization of the `average_house_value` per year as a bar chart was made.
 
 1. Calculated the mean `average_house_value` for each year.
 
@@ -60,58 +60,58 @@ In this section, I wanted to determine the average house value per year. An inve
 
 #### Average Prices By Neighbourhood
 
-In this section, I compared the house value by neighbourhood.
+In this section, a comparison was made on the basis of the house value by neighbourhood.
 
-1. Created a new DataFrame with the mean house values by neighbourhood per year.
+1. A new DataFrame was created with the mean house values by neighbourhood per year.
 
-2. Visualized the mean `average_house_value` per year with the neighbourhood as a dropdown selector.
+2. The mean `average_house_value` per year was visualized with the neighbourhood as a dropdown selector.
 
-I used `hvplot` to obtain the interactive dropdown selector for the neighbourhood.
+The `hvplot` function was used to obtain the interactive dropdown selector for the neighbourhood.
 
   ![avg-price-neighbourhood.png](Images/avg-price-neighbourhood.png)
 
 #### Number of Dwelling Types per Year
 
-In this section, I visualized the number of dwelling types per year in each neighbourhood. I wanted to provide investors a tool to understand the evolution of dwelling types over the years.
+In this section, the visualization for the number of dwelling types per year in each neighbourhood was created. The reason was to provide investors a tool to understand the evolution of dwelling types over the years.
 
-I used `hvplot` to create an interactive visualization of the average number of dwelling types per year with a dropdown selector for the neighbourhood.
+The use of `hvplot` function was made to create an interactive visualization of the average number of dwelling types per year with a dropdown selector for the neighbourhood.
 
 ![dwelling_types_per_year](Images/dwelling_types_per_year.png)
 
 #### Top 10 Most Expensive Neighbourhoods
 
-In this section, I tried to figure out which neighbourhoods are the most expensive. I calculated the mean house value for each neighbourhood and then sorted the values to obtain the top 10 most expensive neighbourhoods on average. Plotted the results as a bar chart.
+In this section, it was required to figure out which neighbourhoods are the most expensive. The mean house value for each neighbourhood was calculated and then the values were sorted to obtain the top 10 most expensive neighbourhoods on average. The results were plotted as a bar chart.
 
 ![top-10-expensive-neighbourhoods.png](Images/top-10-expensive-neighbourhoods.png)
 
 #### Neighbourhood Map
 
-In this final section, I read in the neighbourhood location data and built an interactive map with the average prices per neighbourhood. Used a scatter Mapbox object from Plotly express to create the visualization. 
+In this final section, the neighbourhood location data was read into the code and an interactive map with the average prices per neighbourhood was created. A scatter Mapbox object from Plotly express was used to create the visualization. 
 
-**Note** You will need an MAPBOX API access key to view this visualization
+**Note** One would require a MAPBOX API access key to view this visualization
 
 
   ![neighbourhood-map.png](Images/neighbourhood-map.png)
 
 #### Cost Analysis 
 
-Plotly express offers a broad selection of interactive plots. In this I used Plotly express to a couple of plots that investors can interactively filter and explore various factors related to the house value of Toronto's neighbourhoods.
+Plotly express offers a broad selection of interactive plots. In this section, the Plotly express was used to create a couple of plots that investors can interactively filter through and explore various factors related to the house value of Toronto's neighbourhoods.
 
-1. Created a bar chart row facet to plot the average house values for all Toronto neighbourhoods per year. 
+1. A bar chart row facet was created to plot the average house values for all Toronto neighbourhoods per year. 
 
     
    ![bar_chart_row](Images/bar_chart_row.png)
 
-2. Created a sunburst chart to conduct a cost analysis of the most expensive neighbourhoods in Toronto per year. 
+2. A sunburst chart was created to conduct a cost analysis of the most expensive neighbourhoods in Toronto per year. 
 
  
     ![sunburst](Images/sunburst.png)
 
 ### Dashboard
 
-Now that all of the code and analysis has been worked out, I used the Panel library to build an interactive dashboard for all of the visualizations. 
+Now that all of the code and analysis has been worked out, the Panel library was used to build an interactive dashboard for all of the visualizations. 
 
-I used the `dashboard.ipynb` starter notebook for the dashboard code. I copied over the code for each visualization and placed this into separate functions (1 function per visualization).  Each function returns the plot figure in a format that Panel can use to plot the visualization.
+The Jupyter Notebook `dashboard.ipynb` was used for the dashboard code. The code for each visualization was copied over and placed into separate functions (1 function per visualization).  Each function returns the plot figure in a format that Panel can use to plot the visualization.
 
 Sample Dashboard:
 
